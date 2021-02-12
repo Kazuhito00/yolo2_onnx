@@ -28,7 +28,7 @@ def detect(cfgfile, weightfile, imgfile):
     
     for i in range(2):
         start = time.time()
-        boxes = do_detect(m, int(sized), 0.5, 0.4, use_cuda)
+        boxes = do_detect(m, sized, 0.5, 0.4, use_cuda)
         finish = time.time()
         if i == 1:
             print('%s: Predicted in %f seconds.' % (imgfile, (finish-start)))
@@ -61,7 +61,7 @@ def detect_cv2(cfgfile, weightfile, imgfile):
     
     for i in range(2):
         start = time.time()
-        boxes = do_detect(m, int(sized), 0.5, 0.4, use_cuda)
+        boxes = do_detect(m, sized, 0.5, 0.4, use_cuda)
         finish = time.time()
         if i == 1:
             print('%s: Predicted in %f seconds.' % (imgfile, (finish-start)))
@@ -94,7 +94,7 @@ def detect_skimage(cfgfile, weightfile, imgfile):
     
     for i in range(2):
         start = time.time()
-        boxes = do_detect(m, int(sized), 0.5, 0.4, use_cuda)
+        boxes = do_detect(m, sized, 0.5, 0.4, use_cuda)
         finish = time.time()
         if i == 1:
             print('%s: Predicted in %f seconds.' % (imgfile, (finish-start)))
